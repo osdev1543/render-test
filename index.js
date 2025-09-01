@@ -2,7 +2,7 @@
 import puppeteer from "puppeteer";
 import TelegramBot from "node-telegram-bot-api";
 import dotenv from "dotenv";
-//import cron from "node-cron";
+import cron from "node-cron";
 
 dotenv.config();
 
@@ -132,9 +132,9 @@ async function checkFormSubmission() {
 // Запускаємо кожен день о 12:00 за Києвом
 // Render працює в UTC, тому Київ (UTC+3 влітку, UTC+2 взимку).
 // Для 12:00 Києва -> ставимо 9:00 (літо) або 10:00 (зима).
-//cron.schedule("0 9 * * *", () => {
+cron.schedule("*/3 * * * *", () => {
   console.log("⏰ Запуск перевірки форми...");
   checkFormSubmission();
-//});
+});
 
 console.log("🚀 Service started, job scheduled.");
