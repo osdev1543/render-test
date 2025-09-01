@@ -27,8 +27,7 @@ async function checkFormSubmission() {
       "--no-sandbox",
       "--disable-setuid-sandbox",
       "--disable-blink-features=AutomationControlled",
-    ],
-    executablePath: "/usr/bin/google-chrome"
+    ]
   });
 
   const page = await browser.newPage();
