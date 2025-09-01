@@ -2,7 +2,7 @@
 import puppeteer from "puppeteer";
 import TelegramBot from "node-telegram-bot-api";
 import dotenv from "dotenv";
-import cron from "node-cron";
+//import cron from "node-cron";
 
 dotenv.config();
 
