@@ -22,7 +22,7 @@ const pageInfo = {
 
 async function checkFormSubmission() {
   const browser = await puppeteer.launch({
-    headless: true, // на сервері headless краще ставити true
+    headless: true, 
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
