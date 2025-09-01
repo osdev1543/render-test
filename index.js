@@ -2,7 +2,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cron from "node-cron";
-import { checkFormSubmission } from "./checkForm";
+import { checkFormSubmission } from "./checkForm.js";
 
 dotenv.config();
 import TelegramBot from "node-telegram-bot-api";
