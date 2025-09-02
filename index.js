@@ -15,6 +15,10 @@ const bot = new TelegramBot(token, { polling: false });
 const app = express();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("✅ Service is running on Render!");
+});
+
 app.post("/receive-message", async (req, res) => {
   const { status, message, source } = req.body;
 
